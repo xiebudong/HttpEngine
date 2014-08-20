@@ -13,9 +13,11 @@ android平台的一个简单的http引擎，支持请求字符串和下载文件
 API使用很简单：
 
 HttpEngine.instance().init();
+
 HttpEngine.instance().uninit();
 
 HttpEngine.instance().requestString(...);
+
 HttpEngine.instance().requestFile(...);
 
 比如请求一个网页：
