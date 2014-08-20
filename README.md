@@ -39,5 +39,7 @@ API使用很简单：
 	}
 ```
 
+示例程序截图：
+
 ![sample screen shot](http://c.hiphotos.bdimg.com/album/s%3D900%3Bq%3D90/sign=8458a0c9fe1f4134e437097e1524e4f7/8b13632762d0f703b3c9a8f60bfa513d2697c5a4.jpg)
 
