@@ -1,0 +1,300 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HttpEngineSample" 
+    android:orientation="vertical"
+    >
+<Button
+    android:id="@+id/btn_request_string" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="请求 www.baidu.com  观察log输出"
+    android:onClick="onClickLogBtn"
+    />
+
+<View 
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/black"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    />
+
+<TextView 
+            android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="测试正常下载 "
+    	android:background="@android:color/darker_gray"
+    	android:layout_marginTop="10dp"
+    />
+
+<TextView 
+            android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text=" 文件存储路径为sdcard根目录, 文件名: test_http_engine_x.apk"
+    	android:textColor="@android:color/darker_gray"
+    	android:layout_marginTop="5dp"
+    	android:textSize="10sp"
+    />
+
+<LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    >
+
+    <ProgressBar
+        android:id="@+id/pgb_1"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:max="100"
+        />
+
+    <TextView 
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="%0"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        />
+    
+    <ToggleButton 
+        android:id="@+id/tb_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="停止下载"
+        android:textOff="开始下载"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        />
+</LinearLayout>
+    
+<LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    >
+
+    <ProgressBar
+        android:id="@+id/pgb_2"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="1" 
+        android:layout_gravity="center_vertical"
+        android:max="100"
+        />
+    <TextView 
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="%0"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        />
+    <ToggleButton 
+        android:id="@+id/tb_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="停止下载"
+        android:textOff="开始下载"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        />
+</LinearLayout>
+
+<LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    >
+
+    <ProgressBar
+        android:id="@+id/pgb_3"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="1" 
+        android:layout_gravity="center_vertical"
+        android:max="100"
+        />
+    <TextView 
+        android:id="@+id/text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="%0"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        />
+    <ToggleButton 
+        android:id="@+id/tb_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="停止下载"
+        android:textOff="开始下载"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        />
+</LinearLayout>
+
+<LinearLayout 
+    	android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+    >
+<TextView 
+        android:layout_width="0dp"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1"
+    	android:text="测试断点续传下载 "
+    	android:background="@android:color/darker_gray"
+    	android:layout_gravity="center_vertical"
+    />
+<TextView 
+    	 android:id="@+id/text_clear_file"
+   		 android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="清除文件"
+         android:textSize="14sp"
+         android:paddingLeft="8dp"
+         android:paddingRight="5dp"
+         android:textColor="#1c5beb"
+         android:layout_gravity="right|center_vertical"
+    />
+</LinearLayout>
+
+<TextView 
+            android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text=" 文件存储路径为sdcard根目录, 文件名: test_http_engine_breakpoint_x.apk"
+    	android:textColor="@android:color/darker_gray"
+    	android:layout_marginTop="5dp"
+    	android:textSize="10sp"
+    />
+
+<LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    >
+
+    <ProgressBar
+        android:id="@+id/pgb_4"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="1" 
+        android:layout_gravity="center_vertical"
+        android:max="100"
+        />
+    <TextView 
+        android:id="@+id/text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="%0"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        />
+    <ToggleButton 
+        android:id="@+id/tb_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="暂停下载"
+        android:textOff="开始下载"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        />
+</LinearLayout>
+    
+<LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    >
+
+    <ProgressBar
+        android:id="@+id/pgb_5"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="1" 
+        android:layout_gravity="center_vertical"
+        android:max="100"
+        />
+    <TextView 
+        android:id="@+id/text_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="%0"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        />
+    <ToggleButton 
+        android:id="@+id/tb_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="暂停下载"
+        android:textOff="开始下载"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        />
+</LinearLayout>
+
+<LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    >
+
+    <ProgressBar
+        android:id="@+id/pgb_6"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="1" 
+        android:layout_gravity="center_vertical"
+        android:max="100"
+        />
+    <TextView 
+        android:id="@+id/text_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="%0"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        />
+    <ToggleButton 
+        android:id="@+id/tb_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="暂停下载"
+        android:textOff="开始下载"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        />
+</LinearLayout>
+</LinearLayout>
