@@ -20,6 +20,8 @@ API使用很简单：
 
 `HttpEngine.instance().requestFile(...);`
 
+###### *更详细的API使用说明见  HttpEngine/doc/index.html*
+
 
 比如请求一个网页：
 
