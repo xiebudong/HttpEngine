@@ -12,16 +12,18 @@ android平台的一个简单的http引擎，支持并发请求字符串和下载
 
 API使用很简单：
 
-HttpEngine.instance().init();
+`HttpEngine.instance().init();`
 
-HttpEngine.instance().uninit();
+`HttpEngine.instance().uninit();`
 
-HttpEngine.instance().requestString(...);
+`HttpEngine.instance().requestString(...);`
 
-HttpEngine.instance().requestFile(...);
+`HttpEngine.instance().requestFile(...);`
+
 
 比如请求一个网页：
 
+```
 	void requestString()
 	{
 		  StringRequest req = new StringRequest("http://www.baidu.com");
@@ -35,7 +37,7 @@ HttpEngine.instance().requestFile(...);
 			  }
 		  });
 	}
-
+```
 
 ![sample screen shot](http://c.hiphotos.bdimg.com/album/s%3D900%3Bq%3D90/sign=8458a0c9fe1f4134e437097e1524e4f7/8b13632762d0f703b3c9a8f60bfa513d2697c5a4.jpg)
 
