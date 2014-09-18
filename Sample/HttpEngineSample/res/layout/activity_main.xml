@@ -32,7 +32,7 @@
 <TextView 
             android:layout_width="match_parent"
     	android:layout_height="wrap_content"
-    	android:text=" 文件存储路径为sdcard根目录, 文件名: test_http_engine_x.apk"
+    	android:text=" 文件存储路径为sdcard根目录, 文件名: engine_x.apk"
     	android:textColor="@android:color/darker_gray"
     	android:layout_marginTop="5dp"
     	android:textSize="10sp"
@@ -181,7 +181,7 @@
 <TextView 
             android:layout_width="match_parent"
     	android:layout_height="wrap_content"
-    	android:text=" 文件存储路径为sdcard根目录, 文件名: test_http_engine_breakpoint_x.apk"
+    	android:text=" 文件存储路径为sdcard根目录, 文件名: engine_breakpoint_x.apk"
     	android:textColor="@android:color/darker_gray"
     	android:layout_marginTop="5dp"
     	android:textSize="10sp"

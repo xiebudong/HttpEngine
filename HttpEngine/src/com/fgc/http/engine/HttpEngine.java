@@ -231,6 +231,13 @@ public class HttpEngine {
 		
 		@Override
 		public void run() {
+			
+		    if (m_Controller.isStoped())
+		    {
+		    	Log.i(LOG_TAG, "enter file task, but request is stoped");
+		    	return;
+		    }
+			
 			if(m_Req.getUrl() == null)
 			{
 				m_Response.setResponseState(Response.State.BAD_URL);
@@ -242,6 +249,12 @@ public class HttpEngine {
 			boolean retryFlag = true;
 			while(retryFlag)
 			{
+			    if (m_Controller.isStoped())
+			    {
+			    	Log.i(LOG_TAG, "string task retrying, but request is stoped");
+			    	return;
+			    }
+			    
 				HttpURLConnection urlConnection = null;
 				try {
 					URL url = new URL(m_Req.getUrl());
@@ -403,6 +416,13 @@ public class HttpEngine {
 		
 		@Override
 		public void run() {
+			
+		    if (m_Controller.isStoped())
+		    {
+		    	Log.i(LOG_TAG, "enter file task, but request is stoped");
+		    	return;
+		    }
+		    
 			if(m_Req.getUrl() == null)
 			{
 				m_Response.setResponseState(Response.State.BAD_URL);
@@ -451,6 +471,12 @@ public class HttpEngine {
 			boolean retryFlag = true;
 			while(retryFlag)
 			{
+			    if (m_Controller.isStoped())
+			    {
+			    	Log.i(LOG_TAG, "file task retrying, but request is stoped");
+			    	return;
+			    }
+			    
 				HttpURLConnection urlConnection = null;
 				try {
 					URL url = new URL(m_Req.getUrl());
